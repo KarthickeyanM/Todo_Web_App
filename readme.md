@@ -1,3 +1,5 @@
+# Due to time constraints, I haven't been able to integrate the 'Buy Pro License' feature into my application.
+
 Flask To-Do List Application
 Overview
 This project is a To-Do List web application built with Flask, featuring GraphQL for API interactions and Keycloak for authentication. The application supports basic CRUD operations on To-Dos and integrates Stripe for Pro license payments, allowing users to upload images with a Pro license.
@@ -7,7 +9,7 @@ User Authentication: Users must log in using Keycloak to access the application.
 To-Do Management: Create, view, edit, delete, and mark To-Dos as done.
 Image Upload: Available only for users with a Pro license.
 GraphQL API: Access and manage To-Dos via a GraphQL API.
-Stripe Integration: Purchase a Pro license to enable image uploads.
+Stripe Integration: Purchase a Pro license to enable image uploads. # Due to time constraints, I haven't been able to integrate this feature into my application.
 GraphiQL Interface: For testing GraphQL queries, protected by Keycloak authentication.
 Installation
 Clone the repository:
