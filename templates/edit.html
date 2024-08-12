@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Todo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Edit Todo</h1>
+        </header>
+        <main>
+            <section class="edit-todo">
+                <form action="{{ url_for('edit', id=todo.id) }}" method="post" enctype="multipart/form-data" class="form-container">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" value="{{ todo.title }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" required>{{ todo.description }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Date and Time</label>
+                        <input type="datetime-local" name="time" id="time" value="{{ todo.time.strftime('%Y-%m-%dT%H:%M') }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="images">Images</label>
+                        <input type="file" name="images" id="images" multiple {% if not user_has_pro_role %} disabled {% endif %}> {% if images_base64 %}
+                        <div class="todo-images">
+                            <img src="data:image/jpeg;base64,{{ images_base64 }}" alt="Todo Image">
+                        </div>
+                        {% endif %}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

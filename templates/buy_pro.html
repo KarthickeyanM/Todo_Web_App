@@ -1,0 +1,28 @@
+<!-- buy_pro_license.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Pro License</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Buy Pro License</h1>
+        </header>
+        <main>
+            <section class="buy-pro-license">
+                <form action="{{ url_for('buy_pro_license') }}" method="post" class="form-container">
+                    <p>Purchase a Pro license to enable image uploads and access additional features.</p>
+                    <button type="submit" class="btn btn-primary">Buy Pro License</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
