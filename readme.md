@@ -1,4 +1,4 @@
-Due to time constraints, I haven't been able to integrate the 'Buy Pro License' feature into my application.
+
 
 # Flask To-Do List Application
 
